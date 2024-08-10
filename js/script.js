@@ -94,6 +94,7 @@ function setPlayingFileNameText(playingName){
 function playNext(){
     player.pause();
     player.currentTime = 0;
+    playButton.textContent = '播放';
     nowPlayingName = FILE_NAME_LIST[getCurrentPlayingFileIndex() + 1]
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
@@ -102,6 +103,7 @@ function playNext(){
 function playPrev(){
     player.pause();
     player.currentTime = 0;
+    playButton.textContent = '播放';
     nowPlayingName = FILE_NAME_LIST[getCurrentPlayingFileIndex() - 1]
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
