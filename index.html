@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>常春藤進階字彙 Level 5</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'></script>
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/slider.css"></link>
+    <link rel="stylesheet" href="css/rainbow.css"></link>
+</head>
+<body>
+    <div class="page">
+        <div class="panel">
+            <div class="information-panel">
+                <div>
+                    <h1 class="in-a-line">歡迎來到</h1><h1 class="rainbow-text in-a-line">常春藤進階字彙 Level 5</h1><br>
+                    <p class="in-a-line">本網頁為個人製作，提供</p><p class="rainbow-text in-a-line">常春藤進階字彙 Level 5</p><p class="in-a-line"> 的語音撥放，為了確認您已經購買書籍，請輸入 Unit 1 最後一個單字。</p>
+                    
+                    <div class="data-input">
+                        <input type="password" class="key-word-input" id="key-word-input" placeholder="輸入單字">
+                        <button class="key-word-button" id="key-word-button">確認</button>
+                    </div>
+                    <p id="alert-text"></p>
+                </div>
+                <div class="statement-panel">
+                    <p class="in-a-line">本網頁開源於</p>
+                    <a class="in-a-line rainbow-text" href="https://github.com/gallen881/IvyAdvancedVocabularyLevel5AudioPlayer">GitHub</a>
+                    <p class="in-a-line">，歡迎提出問題、PR。</p>
+                    <p class="in-a-line">如果喜歡這個網頁也請至</p>
+                    <p class="in-a-line rainbow-text">GitHub 點星星</p>
+                    <p class="in-a-line">給予支持。</p>
+                    <br>
+                    <p class="in-a-line">本網頁無意侵犯著作權，如有任何疑問請立即以</p><a class="in-a-line" href="mailto:gallen.yes@gmail.com">Mail</a><p class="in-a-line">聯絡。會立即下架此內容。</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="data-input">
+                <input class="file-selector-input" id="file-selector-input" placeholder="輸入音軌">
+                <button class="file-selector-button" id="file-selector-button">確認</button>
+            </div>
+            <div class="music-player">
+                <a class="file-name-text"></a>
+                <audio controls controlsList="nodownload noplaybackrate"></audio>
+            </div>
+            <div class="control-panel">
+                <button id="prev-page-button">上一頁</button>
+                <button id="play-button">播放</button>
+                <button id="next-page-button">下一頁</button>
+                <button id="reset-button">停止</button>
+                <button id="mute-button">靜音</button>
+            </div>
+            <div class="lower-panel">
+                <div class="volume-panel">
+                    <div class="wrapper">
+                        <p class="slider-text">音量</p>
+                        <input id="volume-slider" type="range" min="0" max="100" value="50" />
+                    </div>
+                    <div class="wrapper">
+                        <p class="slider-text">速度</p>
+                        <input id="speed-slider" type="range" min="0" max="100" value="50" />
+                    </div>
+                </div>
+                <div class="panel-container">
+                    <div class="control-panel">
+                        <button id="back-5s-button">倒轉五秒</button>
+                        <button id="forward-5s-button">快轉五秒</button>
+                    </div>
+                    <div class="control-panel">
+                        <button id="prev-unit-button">上一單元</button>
+                        <button id="next-unit-button">下一單元</button>
+                    </div>
+                    <div class="control-panel">
+                        <label>
+                            <input type="checkbox" id="auto-play-checkbox" unchecked>
+                            自動播放
+                        </label>
+                        <label>
+                            <input type="checkbox" id="rainbow-checkbox" unchecked>
+                            七彩繽紛
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/rainbow.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body {
+    background-color: #181a1b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width: 1100px) {
+    .page {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+.in-a-line {
+    display: inline;
+}
+
+.panel {
+    padding: 20px;
+    background-color: #262a2b;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    min-width: 355px;
+    max-width: 500px;
+}
+
+.music-player {
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #33373a;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+audio::-webkit-media-controls-play-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    display: none;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+    display: none;
+}
+
+audio::-webkit-media-controls-mute-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #dbdbdb;
+}
+
+/* audio::-webkit-media-controls-current-time-display {
+    color: #fff;
+} */
+
+/* audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+} */
+
+/* audio::-webkit-media-controls-timeline-container {
+    background-color: #B1D4E0;
+} */
+
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.control-panel button {
+    padding: 10px 19px;
+    margin: 0 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.control-panel button:hover {
+    background-color: #45a049;
+}
+
+.data-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.file-selector-input, .key-word-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+}
+
+.file-selector-button, .key-word-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.file-selector-button:hover, .key-word-button:hover {
+    background-color: #45a049;
+}
+
+.volume-panel {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.volume-panel .wrapper {
+    margin: 0 10px;
+}
+
+.slider-text {
+    font-size: 16px;
+    /* make it at center between top and bottom */
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.lower-panel {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.panel-container {
+    flex: 1;
+}
+
+label {
+    border:1px solid #ccc;
+    padding:10px;
+    margin:0 0 10px;
+    display:block; 
+    background-color: #333;
+    color: #fff;
+}
+
+label:hover {
+    background:#eee;
+    color:#333;
+    cursor:pointer;
+}
+
+#alert-text {
+    color: red;
+    text-align: center;
+}
+
+.information-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.statement-panel p, .statement-panel a {
+    font-size: small;
+    color: #6b6b6b;
+}

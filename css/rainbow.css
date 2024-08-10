@@ -1,0 +1,1 @@
+#rainbow-text {animation:color-change 1s infinite; display: inline;}@keyframes color-change{0%{color:red;}16.67%{color:orange;}33.34%{color:yellow;}50.01%{color:green;}66.68%{color:blue;}83.35%{color:violet;}100%{color:purple;}}
