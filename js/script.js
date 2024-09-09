@@ -35,6 +35,10 @@ fetch('fileNameList.json')
 .then(response => response.json())
 .then(data => FILE_NAME_LIST = data);
 
+fetch('newFileList.json')
+.then(response => response.json())
+.then(data => NEW_FILE_LIST = data);
+
 const prevButton = document.getElementById('prev-page-button');
 const playButton = document.getElementById('play-button');
 const nextButton = document.getElementById('next-page-button');
@@ -162,7 +166,9 @@ function playInputFile(){
     player.pause();
     playButton.textContent = '播放';
     player.currentTime = 0;
-    if (FILE_NAME_LIST.includes(fileSelectInput.value)){
+    if (NEW_FILE_LIST.includes(fileSelectInput.value)){
+        nowPlayingName = fileSelectInput.value + 'new'
+    }else if (FILE_NAME_LIST.includes(fileSelectInput.value)){
         nowPlayingName = fileSelectInput.value
     }else{
         alert_text.textContent = 'File Not Found'
