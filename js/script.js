@@ -91,6 +91,11 @@ function setPlayingFileNameText(playingName){
     file_name_text.textContent = playingName;
 }
 
+function setPlayerParameters(){
+    player.volume = volumeSlider.value / 100;
+    player.playbackRate = speedSlider.value / 50;
+}
+
 function playNext(){
     player.pause();
     player.currentTime = 0;
@@ -98,6 +103,7 @@ function playNext(){
     nowPlayingName = FILE_NAME_LIST[getCurrentPlayingFileIndex() + 1]
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
+    setPlayerParameters();
 }
 
 function playPrev(){
@@ -107,11 +113,13 @@ function playPrev(){
     nowPlayingName = FILE_NAME_LIST[getCurrentPlayingFileIndex() - 1]
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
+    setPlayerParameters();
 }
 function playerInit(){
     nowPlayingName = '0101-0103'
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
+    setPlayerParameters();
 }
 
 player.volume = 0.5;
@@ -163,8 +171,9 @@ function playInputFile(){
         })
         return
     }
-    setPlayingFile(nowPlayingName)
-    setPlayingFileNameText(nowPlayingName)
+    setPlayingFile(nowPlayingName);
+    setPlayingFileNameText(nowPlayingName);
+    setPlayerParameters();
 }
 
 fileSelectButton.addEventListener('click', playInputFile);
@@ -198,6 +207,7 @@ nextUnitButton.addEventListener('click', function(){
             nowPlayingName = FILE_NAME_LIST[i]
             setPlayingFile(nowPlayingName)
             setPlayingFileNameText(nowPlayingName)
+            setPlayerParameters();
             return
         }
     }
@@ -211,12 +221,14 @@ prevUnitButton.addEventListener('click', function(){
             nowPlayingName = FILE_NAME_LIST[i + 1]
             setPlayingFile(nowPlayingName)
             setPlayingFileNameText(nowPlayingName)
+            setPlayerParameters();
             return
         }
     }
     nowPlayingName = FILE_NAME_LIST[0]
     setPlayingFile(nowPlayingName)
     setPlayingFileNameText(nowPlayingName)
+    setPlayerParameters();
 });
 
 autoPlayCheckbox.addEventListener('change', function(){
